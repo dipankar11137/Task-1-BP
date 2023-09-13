@@ -1,8 +1,11 @@
 import React from 'react';
 import { BsFillGrid3X3GapFill, BsMessenger } from 'react-icons/bs';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaSearch } from 'react-icons/fa';
+import { IoNotificationsSharp } from 'react-icons/io5';
 import Messenger from './NavHelper/Messenger';
 import NineDots from './NavHelper/NineDots';
+import Notification from './NavHelper/Notification';
+import './NavHelper/ThreeCorners.css';
 
 const Navbar = ({ setDrawer, drawer }) => {
   return (
@@ -37,7 +40,29 @@ const Navbar = ({ setDrawer, drawer }) => {
           <div className="border-r-2 h-[61px] ml-2 duration-300"></div>
         )}
       </div>
-      <div className="flex-none  py-0">
+      <div className="flex-none  py-0 mr-8">
+        {/* search bar */}
+        <div
+          className={`${
+            drawer ? 'w-80' : 'w-96'
+          } flex items-center bg-white p-2 rounded-full mr-5 w-96 py-3 shadow`}
+        >
+          <FaSearch className="text-gray-500" />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="ml-2 bg-transparent outline-none placeholder-gray-500"
+          />
+        </div>
+        {/* name image */}
+        <div className="flex items-center mr-5 shadow-lg py-2 px-2 rounded-full cursor-pointer">
+          <img
+            className="w-8 h-8 rounded-full"
+            src="https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/MESSI.jpg"
+            alt=""
+          />
+          <h1 className="ml-2 font-semibold">Jhon Doe</h1>
+        </div>
         {/* 9 dots */}
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -50,13 +75,40 @@ const Navbar = ({ setDrawer, drawer }) => {
             className="mt-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow-lg"
           >
             <NineDots />
+            <div className="fixed top-0 right-3 -mt-4">
+              <div className="triangle ">
+                <div className="triangle-inner"></div>
+              </div>
+            </div>
           </div>
         </div>
         {/* Messenger */}
-        <div className="dropdown dropdown-end ml-3">
+        <div className="dropdown dropdown-end ml-5">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <div className="indicator  p-3 rounded-full shadow-lg">
               <BsMessenger className="text-lg" />
+              <span className="badge badge-primary badge-sm indicator-item rounded-full">
+                5
+              </span>
+            </div>
+          </label>
+          <div
+            tabIndex={0}
+            className="mt-3 z-[1] card card-compact dropdown-content  bg-base-100 shadow-lg"
+          >
+            <Messenger />
+            <div className="fixed top-0 right-3 -mt-4">
+              <div className="triangle ">
+                <div className="triangle-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Notification */}
+        <div className="dropdown dropdown-end ml-5">
+          <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <div className="indicator  p-3 rounded-full shadow-lg">
+              <IoNotificationsSharp className="text-lg" />
               <span className="badge badge-primary badge-sm indicator-item rounded-full">
                 8
               </span>
@@ -66,67 +118,13 @@ const Navbar = ({ setDrawer, drawer }) => {
             tabIndex={0}
             className="mt-3 z-[1] card card-compact dropdown-content  bg-base-100 shadow-lg"
           >
-            <Messenger />
-          </div>
-        </div>
-        {/* Notification */}
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle">
-            <div className="indicator">
-              {/* <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg> */}
-              <BsFillGrid3X3GapFill />
-              <span className="badge badge-sm indicator-item">8</span>
-            </div>
-          </label>
-          <div
-            tabIndex={0}
-            className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
-          >
-            <div className="card-body">
-              <span className="font-bold text-lg">8 Items</span>
-              <span className="text-info">Subtotal: $999</span>
-              <div className="card-actions">
-                <button className="btn btn-primary btn-block">View cart</button>
+            <Notification />
+            <div className="fixed top-0 right-3 -mt-4">
+              <div className="triangle ">
+                <div className="triangle-inner"></div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="dropdown dropdown-end ">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
