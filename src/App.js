@@ -1,3 +1,4 @@
+import Aos from 'aos';
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -5,6 +6,7 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Header from './Pages/ProAdmin/Header';
 import ProHome from './Pages/ProAdmin/Index/ProHome';
+Aos.init();
 
 function App() {
   return (

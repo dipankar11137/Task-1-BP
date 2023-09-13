@@ -1,5 +1,7 @@
 import React from 'react';
+import { BsFillGrid3X3GapFill } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
+import NineDots from './NavHelper/NineDots';
 
 const Navbar = ({ setDrawer, drawer }) => {
   return (
@@ -24,8 +26,8 @@ const Navbar = ({ setDrawer, drawer }) => {
         </div>
         <div className="border-r-2 h-[61px]"></div>
         {drawer && (
-          <div>
-            <h1 className="ml-2 text-3xl font-extrabold duration-300">
+          <div className="duration-400">
+            <h1 className="ml-2 text-3xl font-extrabold  duration-300">
               Business<span className="font-semibold">Post</span>
             </h1>
           </div>
@@ -35,10 +37,25 @@ const Navbar = ({ setDrawer, drawer }) => {
         )}
       </div>
       <div className="flex-none  py-0">
+        {/* 9 dots */}
+        <div className="dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <div className="indicator bg-white p-3 rounded-full shadow-lg">
+              <BsFillGrid3X3GapFill className="text-lg" />
+            </div>
+          </label>
+          <div
+            tabIndex={0}
+            className="mt-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow-lg"
+          >
+            <NineDots />
+          </div>
+        </div>
+        {/* Notification */}
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <div className="indicator">
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 fill="none"
@@ -51,7 +68,8 @@ const Navbar = ({ setDrawer, drawer }) => {
                   strokeWidth="2"
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
-              </svg>
+              </svg> */}
+              <BsFillGrid3X3GapFill />
               <span className="badge badge-sm indicator-item">8</span>
             </div>
           </label>
@@ -91,18 +109,6 @@ const Navbar = ({ setDrawer, drawer }) => {
               <a>Logout</a>
             </li>
           </ul>
-        </div>
-        <div>
-          <h1>dadao</h1>
-        </div>
-        <div>
-          <h1>dadao</h1>
-        </div>
-        <div>
-          <h1>dadao</h1>
-        </div>
-        <div>
-          <h1>dadao</h1>
         </div>
       </div>
     </div>
