@@ -3,26 +3,36 @@ import { FaBars } from 'react-icons/fa';
 
 const Navbar = ({ setDrawer, drawer }) => {
   return (
-    <div className="navbar bg-base-100 border-b-2 py-0 my-0">
+    <div className="navbar fixed z-50 bg-base-100 border-b-2 py-0 my-0">
       <div className="flex-1  ">
-        <div className="-ml-3  w-[66px]">
+        <div className="-ml-3  w-[58px]">
           {drawer ? (
             <button
               onClick={() => setDrawer(false)}
-              className=" md:ml-3 text-lg p-3 rounded-full shadow-xl "
+              className=" md:ml-3 text-lg p-2 rounded-full shadow-xl "
             >
               <FaBars />
             </button>
           ) : (
             <button
               onClick={() => setDrawer(true)}
-              className=" md:ml-3 text-lg p-3 rounded-full shadow-xl "
+              className=" md:ml-3 text-lg p-2 rounded-full shadow-xl "
             >
               <FaBars />
             </button>
           )}
         </div>
         <div className="border-r-2 h-[61px]"></div>
+        {drawer && (
+          <div>
+            <h1 className="ml-2 text-3xl font-extrabold duration-300">
+              Business<span className="font-semibold">Post</span>
+            </h1>
+          </div>
+        )}
+        {drawer && (
+          <div className="border-r-2 h-[61px] ml-2 duration-300"></div>
+        )}
       </div>
       <div className="flex-none  py-0">
         <div className="dropdown dropdown-end">

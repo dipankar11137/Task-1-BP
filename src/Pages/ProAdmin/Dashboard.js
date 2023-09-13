@@ -4,20 +4,22 @@ import { FaBusinessTime, FaEye, FaSearchPlus, FaUser } from 'react-icons/fa';
 import { HiSpeakerphone } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { Outlet } from 'react-router-dom';
+import './Tooltip.css';
 
 const Dashboard = ({ drawer, setDrawer }) => {
   const [open, setOpen] = useState(false);
   const [selectedButton, setSelectedButton] = useState('');
+
   return (
     <div className="bg-white flex ">
       {/* left side */}
-      <div className="relative z-10 p-2 border-r-2 w-[56px] ml-2">
+      <div className="fixed z-40 md:pt-20  p-2 border-r-2 w-[56px] pl-2 h-screen bg-white">
         <div
           onClick={() => setSelectedButton('Overview')}
           data-tip="Overview"
           className={
             selectedButton === 'Overview'
-              ? 'rounded-full shadow-lg  p-2 mt-5 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              ? 'rounded-full shadow-lg  p-2 mt-5 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral tooltip-container '
               : 'rounded-full shadow-lg  p-2 mt-5 cursor-pointer tooltip tooltip-right '
           }
         >
@@ -105,14 +107,14 @@ const Dashboard = ({ drawer, setDrawer }) => {
             <section className="flex ">
               <div
                 className={` ${
-                  drawer ? 'w-40 ' : 'w-[0px] '
-                } bg-green-400 h-screen  text-white pt-8 relative duration-300`}
+                  drawer ? 'w-[260px] border-r-2' : 'w-[0px] '
+                } bg-white h-screen  text-white pt-40 pl-[57px] relative  duration-300`}
               >
                 <div className="mt-4  flex flex-col gap-4 relative">
                   <>
                     {/* Manage contact */}
                     {drawer && (
-                      <div className=" bg-red-600">
+                      <div className=" text-black">
                         <h1>dado</h1>
                         <p>
                           Lorem ipsum dolor sit amet consectetur, adipisicing
