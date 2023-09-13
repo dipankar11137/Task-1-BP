@@ -4,22 +4,25 @@ import { FaBars } from 'react-icons/fa';
 const Navbar = ({ setDrawer, drawer }) => {
   return (
     <div className="navbar bg-base-100 border-b-2 py-0 my-0">
-      <div className="flex-1 ">
-        {drawer ? (
-          <button
-            onClick={() => setDrawer(false)}
-            className=" md:ml-3 text-xl p-3 rounded-full shadow-xl "
-          >
-            <FaBars />
-          </button>
-        ) : (
-          <button
-            onClick={() => setDrawer(true)}
-            className=" md:ml-3 text-xl p-3 rounded-full shadow-xl "
-          >
-            <FaBars />
-          </button>
-        )}
+      <div className="flex-1  ">
+        <div className="-ml-3  w-[66px]">
+          {drawer ? (
+            <button
+              onClick={() => setDrawer(false)}
+              className=" md:ml-3 text-lg p-3 rounded-full shadow-xl "
+            >
+              <FaBars />
+            </button>
+          ) : (
+            <button
+              onClick={() => setDrawer(true)}
+              className=" md:ml-3 text-lg p-3 rounded-full shadow-xl "
+            >
+              <FaBars />
+            </button>
+          )}
+        </div>
+        <div className="border-r-2 h-[61px]"></div>
       </div>
       <div className="flex-none  py-0">
         <div className="dropdown dropdown-end">

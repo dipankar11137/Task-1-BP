@@ -1,13 +1,94 @@
 import React, { useState } from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import { FaBusinessTime, FaEye, FaSearchPlus, FaUser } from 'react-icons/fa';
+import { HiSpeakerphone } from 'react-icons/hi';
+import { MdEmail } from 'react-icons/md';
 import { Outlet } from 'react-router-dom';
 
 const Dashboard = ({ drawer, setDrawer }) => {
   const [open, setOpen] = useState(false);
   const [selectedButton, setSelectedButton] = useState('');
   return (
-    <div className="bg-white flex">
-      <div className="relative z-10 ">
-        <h1>Hello</h1>
+    <div className="bg-white flex ">
+      {/* left side */}
+      <div className="relative z-10 p-2 border-r-2 w-[56px] ml-2">
+        <div
+          onClick={() => setSelectedButton('Overview')}
+          data-tip="Overview"
+          className={
+            selectedButton === 'Overview'
+              ? 'rounded-full shadow-lg  p-2 mt-5 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-5 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <AiFillHome className="text-lg " />
+        </div>
+        <div
+          onClick={() => setSelectedButton('Profile Setting')}
+          data-tip="Profile Setting"
+          className={
+            selectedButton === 'Profile Setting'
+              ? 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <FaUser className="text-lg " />
+        </div>
+        <div
+          onClick={() => setSelectedButton('My Promos')}
+          data-tip="My Promos"
+          className={
+            selectedButton === 'My Promos'
+              ? 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <HiSpeakerphone className="text-lg " />
+        </div>
+        <div
+          onClick={() => setSelectedButton('My Save Search')}
+          data-tip="My Save Search"
+          className={
+            selectedButton === 'My Save Search'
+              ? 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <FaSearchPlus className="text-lg " />
+        </div>
+        <div
+          onClick={() => setSelectedButton('My Watch list')}
+          data-tip="My Watch list"
+          className={
+            selectedButton === 'My Watch list'
+              ? 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <FaEye className="text-lg " />
+        </div>
+        <div
+          onClick={() => setSelectedButton('My Order History')}
+          data-tip="My Order History"
+          className={
+            selectedButton === 'My Order History'
+              ? 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <FaBusinessTime className="text-lg " />
+        </div>
+        <div
+          onClick={() => setSelectedButton('Email Center')}
+          data-tip="Email Center"
+          className={
+            selectedButton === 'Email Center'
+              ? 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer bg-blue-600 text-white tooltip tooltip-open tooltip-right tooltip-neutral '
+              : 'rounded-full shadow-lg  p-2 mt-2 cursor-pointer tooltip tooltip-right '
+          }
+        >
+          <MdEmail className="text-lg " />
+        </div>
       </div>
       <div>
         <div className="drawer md:drawer-mobile">
