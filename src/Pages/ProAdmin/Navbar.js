@@ -1,6 +1,7 @@
 import React from 'react';
-import { BsFillGrid3X3GapFill } from 'react-icons/bs';
+import { BsFillGrid3X3GapFill, BsMessenger } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
+import Messenger from './NavHelper/Messenger';
 import NineDots from './NavHelper/NineDots';
 
 const Navbar = ({ setDrawer, drawer }) => {
@@ -49,6 +50,23 @@ const Navbar = ({ setDrawer, drawer }) => {
             className="mt-3 z-[1] card card-compact dropdown-content w-96 bg-base-100 shadow-lg"
           >
             <NineDots />
+          </div>
+        </div>
+        {/* Messenger */}
+        <div className="dropdown dropdown-end ml-3">
+          <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <div className="indicator  p-3 rounded-full shadow-lg">
+              <BsMessenger className="text-lg" />
+              <span className="badge badge-primary badge-sm indicator-item rounded-full">
+                8
+              </span>
+            </div>
+          </label>
+          <div
+            tabIndex={0}
+            className="mt-3 z-[1] card card-compact dropdown-content  bg-base-100 shadow-lg"
+          >
+            <Messenger />
           </div>
         </div>
         {/* Notification */}
