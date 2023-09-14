@@ -7,13 +7,12 @@ import { Outlet } from 'react-router-dom';
 import './Tooltip.css';
 
 const Dashboard = ({ drawer, setDrawer }) => {
-  const [open, setOpen] = useState(false);
   const [selectedButton, setSelectedButton] = useState('');
 
   return (
-    <div className="bg-white flex ">
+    <div className="bg-slate-100 flex ">
       {/* left side */}
-      <div className="fixed z-40 md:pt-20  p-2 border-r-2 w-[56px] pl-2 h-screen bg-white">
+      <div className="fixed z-40 md:pt-20  p-2 border-r-[1px] w-[55px] pl-2 h-screen bg-white">
         <div
           onClick={() => setSelectedButton('Overview')}
           data-tip="Overview"
@@ -93,13 +92,17 @@ const Dashboard = ({ drawer, setDrawer }) => {
         </div>
       </div>
       <div>
-        <div className="drawer md:drawer-mobile">
+        <div className="drawer drawer-mobile">
           <input
             id="dashboard-sidebar"
             type="checkbox"
             className="drawer-toggle "
           />
-          <div className="drawer-content">
+          <div
+            className={`${
+              drawer ? 'lg:w-[1100px]' : 'lg:w-[1305px]'
+            } drawer-content drawer-w-full   `}
+          >
             <Outlet></Outlet>
           </div>
           <div className="drawer-side navigation ">
@@ -107,7 +110,7 @@ const Dashboard = ({ drawer, setDrawer }) => {
             <section className="flex ">
               <div
                 className={` ${
-                  drawer ? 'w-[260px] border-r-2' : 'w-[0px] '
+                  drawer ? 'w-[258px] border-r-[1px]' : 'w-[0px] '
                 } bg-white h-screen  text-white pt-40 pl-[57px] relative  duration-300`}
               >
                 <div className="mt-4  flex flex-col gap-4 relative">

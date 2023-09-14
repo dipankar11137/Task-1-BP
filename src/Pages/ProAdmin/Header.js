@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useDrawer from '../../hooks/useDrawer';
 import Dashboard from './Dashboard';
 import Navbar from './Navbar';
 
 const Header = ({ openDrawer }) => {
-  const [drawer, setDrawer] = useState(false);
+  const [drawer, setDrawer] = useDrawer();
+
   return (
     <div>
       <Navbar setDrawer={setDrawer} drawer={drawer} />

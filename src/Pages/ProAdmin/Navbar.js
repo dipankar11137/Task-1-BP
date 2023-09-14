@@ -8,8 +8,9 @@ import Notification from './NavHelper/Notification';
 import './NavHelper/ThreeCorners.css';
 
 const Navbar = ({ setDrawer, drawer }) => {
+  // console.log(drawer);
   return (
-    <div className="navbar fixed z-50 bg-base-100 border-b-2 py-0 my-0">
+    <div className="navbar fixed z-50 bg-base-100 border-b-[1px] py-0 my-0">
       <div className="flex-1  ">
         <div className="-ml-3  w-[58px]">
           {drawer ? (
@@ -28,7 +29,7 @@ const Navbar = ({ setDrawer, drawer }) => {
             </button>
           )}
         </div>
-        <div className="border-r-2 h-[61px]"></div>
+        <div className="border-r-[1px] h-[61px]"></div>
         {drawer && (
           <div className="duration-400">
             <h1 className="ml-2 text-3xl font-extrabold  duration-300">
@@ -37,14 +38,14 @@ const Navbar = ({ setDrawer, drawer }) => {
           </div>
         )}
         {drawer && (
-          <div className="border-r-2 h-[61px] ml-2 duration-300"></div>
+          <div className="border-r-[1px] h-[61px] ml-2 duration-300"></div>
         )}
       </div>
       <div className="flex-none  py-0 mr-8">
         {/* search bar */}
         <div
           className={`${
-            drawer ? 'w-80' : 'w-96'
+            drawer ? 'w-72 ' : 'w-96'
           } flex items-center bg-white p-2 rounded-full mr-5 w-96 py-3 shadow`}
         >
           <FaSearch className="text-gray-500" />

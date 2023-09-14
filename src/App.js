@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Home from './Pages/Home/Home';
 import Header from './Pages/ProAdmin/Header';
-import ProHome from './Pages/ProAdmin/Index/ProHome';
+import ProAdminHome from './Pages/ProAdmin/Index/ProAdminHome';
 Aos.init();
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/*" element={<NotFound />}></Route> */}
         {/* dashboard */}
         <Route path="/dashboard" element={<Header />}>
-          <Route index element={<ProHome />} />
+          <Route index element={<ProAdminHome />} />
 
           {/* <Route path="profile" element={<ProHome />} /> */}
           {/* <Route path="editProfile" element={<EditProfile />} /> */}
