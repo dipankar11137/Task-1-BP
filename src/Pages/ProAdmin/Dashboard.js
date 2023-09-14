@@ -4,7 +4,7 @@ import { FaBusinessTime, FaEye, FaSearchPlus, FaUser } from 'react-icons/fa';
 import { HiSpeakerphone } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 import { TiThLargeOutline } from 'react-icons/ti';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './Tooltip.css';
 
 const Dashboard = ({ drawer, setDrawer }) => {
@@ -121,12 +121,14 @@ const Dashboard = ({ drawer, setDrawer }) => {
                       <div className=" text-black ">
                         <hr className="mb-1" />
 
-                        <p
-                          href=""
-                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
-                        >
-                          <AiFillHome className="mr-1" /> Overview
-                        </p>
+                        <Link to="/proAdmin">
+                          <p
+                            href=""
+                            className="hover:text-accent cursor-pointer pl-2 flex items-center"
+                          >
+                            <AiFillHome className="mr-1" /> Overview
+                          </p>
+                        </Link>
                         <hr className="my-1" />
                         <p
                           href=""
@@ -153,12 +155,11 @@ const Dashboard = ({ drawer, setDrawer }) => {
                           <AiFillHome className="mr-1" /> My profile
                         </p>
                         <hr className="my-1" />
-                        <p
-                          href=""
-                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
-                        >
-                          <TiThLargeOutline className="mr-1" /> My Profile
-                        </p>
+                        <Link to="/proAdmin/myProfile">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center">
+                            <TiThLargeOutline className="mr-1" /> My Profile
+                          </p>
+                        </Link>
 
                         <hr className="my-1" />
                       </div>

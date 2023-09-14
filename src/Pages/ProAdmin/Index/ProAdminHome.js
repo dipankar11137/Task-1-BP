@@ -1,6 +1,7 @@
 import React from 'react';
 import { BiUpArrowAlt } from 'react-icons/bi';
 import List from '../../../Components/List';
+import Footer from '../../../Share/Footer';
 import useDrawer from '../../../hooks/useDrawer';
 
 const ProAdminHome = () => {
@@ -62,18 +63,7 @@ const ProAdminHome = () => {
       <List name={' Business Sales Promo'} />
       <List name={'Business Directory'} />
 
-      <footer className="footer  p-4 bg-white text-base-content mt-40 pt-14 ">
-        <div className="flex justify-between px-10 w-full items-center pb-4">
-          <p>Business Media Group 2020.All rights reserved</p>
-          <div className="flex gap-5">
-            <p className="cursor-pointer hover:text-primary">
-              Terms of Service
-            </p>
-            <p className="cursor-pointer hover:text-primary">Privacy Policy</p>
-            <p className="cursor-pointer hover:text-primary">Contact us</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

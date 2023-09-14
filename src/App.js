@@ -6,6 +6,7 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Header from './Pages/ProAdmin/Header';
 import ProAdminHome from './Pages/ProAdmin/Index/ProAdminHome';
+import MyProfile from './Pages/ProAdmin/My Profile/MyProfile';
 Aos.init();
 
 function App() {
@@ -16,15 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
-        {/* <Route path="/createAccount" element={<CreateAccount />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/*" element={<NotFound />}></Route> */}
         {/* dashboard */}
-        <Route path="/dashboard" element={<Header />}>
+        <Route path="/proAdmin" element={<Header />}>
           <Route index element={<ProAdminHome />} />
-
-          {/* <Route path="profile" element={<ProHome />} /> */}
-          {/* <Route path="editProfile" element={<EditProfile />} /> */}
+          <Route path="myProfile" element={<MyProfile />} />
         </Route>
       </Routes>
 
