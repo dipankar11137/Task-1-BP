@@ -172,7 +172,7 @@ const Dashboard = ({ drawer, setDrawer }) => {
                         >
                           My Promos
                         </p>
-                        <hr className="my-1" />
+                        <hr className="my-2" />
                         <Link to="/proAdmin/businessSales">
                           <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-md">
                             <TiThLargeOutline className="mr-2" /> Business /
@@ -180,21 +180,21 @@ const Dashboard = ({ drawer, setDrawer }) => {
                           </p>
                         </Link>
 
-                        <hr className="my-1" />
+                        <hr className="my-2" />
                         <Link to="/proAdmin/professionalDirectory">
                           <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-md">
-                            <TiThLargeOutline className="mr-2" /> Professional
+                            <TiThLargeOutline className="mr-2" /> Business
                             Directory
                           </p>
                         </Link>
-                        <hr className="my-1" />
+                        <hr className="my-2" />
                         <Link to="/proAdmin/newBusinessSales">
                           <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-md">
                             <TiThLargeOutline className="mr-2" />
                             New Business Sales
                           </p>
                         </Link>
-                        <hr className="my-1" />
+                        <hr className="my-2" />
                       </div>
                     )}
                   </>
