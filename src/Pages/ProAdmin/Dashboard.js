@@ -3,6 +3,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { FaBusinessTime, FaEye, FaSearchPlus, FaUser } from 'react-icons/fa';
 import { HiSpeakerphone } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
+import { TiThLargeOutline } from 'react-icons/ti';
 import { Outlet } from 'react-router-dom';
 import './Tooltip.css';
 
@@ -111,49 +112,57 @@ const Dashboard = ({ drawer, setDrawer }) => {
               <div
                 className={` ${
                   drawer ? 'w-[258px] border-r-[1px]' : 'w-[0px] '
-                } bg-white h-screen  text-white pt-40 pl-[57px] relative  duration-300`}
+                } bg-white h-screen  text-white pt-16 pl-[57px] relative  duration-300`}
               >
                 <div className="mt-4  flex flex-col gap-4 relative">
                   <>
                     {/* Manage contact */}
-                    {drawer && (
-                      <div className=" text-black">
-                        <h1>dado</h1>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur, adipisicing
-                          elit. Placeat veniam fugit consectetur tempora dolore
-                          eum ducimus enim rem, id voluptatibus voluptates
-                          quaerat accusantium nihil facilis porro assumenda eius
-                          error soluta.
+                    {selectedButton === 'Overview' && (
+                      <div className=" text-black ">
+                        <hr className="mb-1" />
+
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
+                        >
+                          <AiFillHome className="mr-1" /> Overview
                         </p>
+                        <hr className="my-1" />
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
+                        >
+                          Business Sales Promo
+                        </p>
+                        <hr className="my-1" />
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
+                        >
+                          Business Directory
+                        </p>
+                        <hr className="my-1" />
                       </div>
                     )}
-                    {/* <div
-                      onClick={() => setSelectedButton('Button 7')}
-                      className={
-                        selectedButton === 'Button 7'
-                          ? 'bg-primary text-black rounded-lg '
-                          : ''
-                      }
-                    >
-                      {' '}
-                      <Link
-                        to="/dashboard/contact"
-                        className={`  group flex items-center text-xl   gap-3.5 font-medium p-2 hover:bg-primary rounded-md`}
-                      >
-                        <h2
-                          style={{
-                            transitionDelay: `${0 + 3}00ms`,
-                          }}
-                          className={`whitespace-pre duration-500 ${
-                            !drawer &&
-                            'opacity-0 translate-x-28 overflow-hidden '
-                          }`}
+                    {selectedButton === 'Profile Setting' && (
+                      <div className=" text-black ">
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
                         >
-                          Manage Contact
-                        </h2>
-                      </Link>
-                    </div> */}
+                          <AiFillHome className="mr-1" /> My profile
+                        </p>
+                        <hr className="my-1" />
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 flex items-center"
+                        >
+                          <TiThLargeOutline className="mr-1" /> My Profile
+                        </p>
+
+                        <hr className="my-1" />
+                      </div>
+                    )}
                   </>
                   {/* )} */}
                 </div>
