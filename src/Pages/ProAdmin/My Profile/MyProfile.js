@@ -23,7 +23,7 @@ const MyProfile = () => {
             <div className="h-12 w-1 bg-primary"></div>
             <h1 className="ml-8 text-3xl font-bold">My Profile </h1>
           </div>
-          <button className="btn btn-accent mr-10 btn-sm text-white shadow-lg">
+          <button className="btn btn-accent mr-10 btn-sm text-white shadow-lg px-5">
             Edit
           </button>
         </div>

@@ -7,6 +7,9 @@ import Home from './Pages/Home/Home';
 import Header from './Pages/ProAdmin/Header';
 import ProAdminHome from './Pages/ProAdmin/Index/ProAdminHome';
 import MyProfile from './Pages/ProAdmin/My Profile/MyProfile';
+import BusinessSales from './Pages/ProAdmin/MyPromos/BusinessSales';
+import NewBusinessSales from './Pages/ProAdmin/MyPromos/NewBusinessSales';
+import ProfessionalDirectory from './Pages/ProAdmin/MyPromos/ProfessionalDirectory';
 Aos.init();
 
 function App() {
@@ -21,6 +24,12 @@ function App() {
         <Route path="/proAdmin" element={<Header />}>
           <Route index element={<ProAdminHome />} />
           <Route path="myProfile" element={<MyProfile />} />
+          <Route path="businessSales" element={<BusinessSales />} />
+          <Route
+            path="professionalDirectory"
+            element={<ProfessionalDirectory />}
+          />
+          <Route path="newBusinessSales" element={<NewBusinessSales />} />
         </Route>
       </Routes>
 

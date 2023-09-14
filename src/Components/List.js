@@ -5,7 +5,7 @@ import { MdArrowDropDown, MdOutlineZoomOutMap } from 'react-icons/md';
 const List = ({ name }) => {
   const [click, setClick] = useState();
   return (
-    <div className="px-6 mt-32 bg-white mx-7 rounded-md shadow-lg pb-36 ">
+    <div className="px-6 mt-32 bg-white mx-7 rounded-xl shadow-lg pb-36 ">
       <h1 className="text-3xl font-semibold pt-14">{name}</h1>
       <div className="flex items-center justify-end md:mr-40">
         <AiOutlineReload
