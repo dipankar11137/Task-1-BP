@@ -8,6 +8,7 @@ import Header from './Pages/ProAdmin/Header';
 import ProAdminHome from './Pages/ProAdmin/Index/ProAdminHome';
 import MyProfile from './Pages/ProAdmin/My Profile/MyProfile';
 import BusinessSales from './Pages/ProAdmin/MyPromos/BusinessSales';
+import NewBusinessPromo from './Pages/ProAdmin/MyPromos/NewBusinessPromo';
 import NewBusinessSales from './Pages/ProAdmin/MyPromos/NewBusinessSales';
 import ProfessionalDirectory from './Pages/ProAdmin/MyPromos/ProfessionalDirectory';
 Aos.init();
@@ -30,6 +31,7 @@ function App() {
             element={<ProfessionalDirectory />}
           />
           <Route path="newBusinessSales" element={<NewBusinessSales />} />
+          <Route path="newBusinessPromo" element={<NewBusinessPromo />} />
         </Route>
       </Routes>
 

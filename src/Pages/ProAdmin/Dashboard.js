@@ -182,16 +182,23 @@ const Dashboard = ({ drawer, setDrawer }) => {
 
                         <hr className="my-2" />
                         <Link to="/proAdmin/professionalDirectory">
-                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-md">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
                             <TiThLargeOutline className="mr-2" /> Business
                             Directory
                           </p>
                         </Link>
                         <hr className="my-2" />
                         <Link to="/proAdmin/newBusinessSales">
-                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-md">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
                             <TiThLargeOutline className="mr-2" />
                             New Business Sales
+                          </p>
+                        </Link>
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/newBusinessPromo">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" />
+                            New Business Promo
                           </p>
                         </Link>
                         <hr className="my-2" />
