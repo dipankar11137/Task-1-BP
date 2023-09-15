@@ -31,8 +31,8 @@ const Navbar = ({ setDrawer, drawer }) => {
         </div>
         <div className="border-r-[1px] h-[61px]"></div>
         {drawer && (
-          <div className="duration-400">
-            <h1 className="ml-2 text-3xl font-extrabold  duration-300">
+          <div className="duration-300">
+            <h1 className="ml-2 text-3xl mr-[20px] font-extrabold  duration-300">
               Business<span className="font-semibold">Post</span>
             </h1>
           </div>

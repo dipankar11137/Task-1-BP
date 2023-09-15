@@ -101,7 +101,7 @@ const Dashboard = ({ drawer, setDrawer }) => {
           />
           <div
             className={`${
-              drawer ? 'lg:w-[1100px]' : 'lg:w-[1305px]'
+              drawer ? 'lg:w-[1085px]' : 'lg:w-[1305px]'
             } drawer-content drawer-w-full   `}
           >
             <Outlet></Outlet>
@@ -111,7 +111,7 @@ const Dashboard = ({ drawer, setDrawer }) => {
             <section className="flex ">
               <div
                 className={` ${
-                  drawer ? 'w-[258px] border-r-[1px]' : 'w-[0px] '
+                  drawer ? 'w-[278px] border-r-[1px]' : 'w-[0px] '
                 } bg-white h-screen  text-white pt-16 pl-[57px] relative  duration-300`}
               >
                 <div className="mt-4  flex flex-col gap-4 relative">
@@ -235,6 +235,64 @@ const Dashboard = ({ drawer, setDrawer }) => {
                         <Link to="/proAdmin/myWatchList">
                           <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
                             <TiThLargeOutline className="mr-2" /> My Watchlist
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                      </div>
+                    )}
+                    {selectedButton === 'My Order History' && (
+                      <div className=" text-black ">
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 text-xl font-bold flex items-center "
+                        >
+                          My Order History
+                        </p>
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/myOrderHistory">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> My Order
+                            History
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                      </div>
+                    )}
+                    {selectedButton === 'Email Center' && (
+                      <div className=" text-black ">
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 text-xl font-bold flex items-center "
+                        >
+                          Email Center
+                        </p>
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/create">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> Create
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/inbox">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> Inbox
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/sent">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> Sent
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/trust">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> Trust
                           </p>
                         </Link>
 
