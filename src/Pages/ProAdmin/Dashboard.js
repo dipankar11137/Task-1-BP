@@ -223,6 +223,24 @@ const Dashboard = ({ drawer, setDrawer }) => {
                         <hr className="my-2" />
                       </div>
                     )}
+                    {selectedButton === 'My Watch list' && (
+                      <div className=" text-black ">
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 text-2xl font-bold flex items-center "
+                        >
+                          My Watchlist
+                        </p>
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/myWatchList">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> My Watchlist
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                      </div>
+                    )}
                   </>
                   {/* )} */}
                 </div>

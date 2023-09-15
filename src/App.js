@@ -12,6 +12,7 @@ import NewBusinessPromo from './Pages/ProAdmin/MyPromos/NewBusinessPromo';
 import NewBusinessSales from './Pages/ProAdmin/MyPromos/NewBusinessSales';
 import ProfessionalDirectory from './Pages/ProAdmin/MyPromos/ProfessionalDirectory';
 import MySaveSearch from './Pages/ProAdmin/MySaveSearch/MySaveSearch';
+import MyWatchList from './Pages/ProAdmin/MyWatchList/MyWatchList';
 Aos.init();
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="newBusinessSales" element={<NewBusinessSales />} />
           <Route path="newBusinessPromo" element={<NewBusinessPromo />} />
           <Route path="mySaveSearch" element={<MySaveSearch />} />
+          <Route path="myWatchList" element={<MyWatchList />} />
         </Route>
       </Routes>
 
