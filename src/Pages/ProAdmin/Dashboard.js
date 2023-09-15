@@ -204,6 +204,25 @@ const Dashboard = ({ drawer, setDrawer }) => {
                         <hr className="my-2" />
                       </div>
                     )}
+                    {selectedButton === 'My Save Search' && (
+                      <div className=" text-black ">
+                        <p
+                          href=""
+                          className="hover:text-accent cursor-pointer pl-2 text-2xl font-bold flex items-center "
+                        >
+                          My Saved Searches
+                        </p>
+                        <hr className="my-2" />
+                        <Link to="/proAdmin/mySaveSearch">
+                          <p className="hover:text-accent cursor-pointer pl-2 flex items-center text-sm">
+                            <TiThLargeOutline className="mr-2" /> My Saved
+                            Searches
+                          </p>
+                        </Link>
+
+                        <hr className="my-2" />
+                      </div>
+                    )}
                   </>
                   {/* )} */}
                 </div>
