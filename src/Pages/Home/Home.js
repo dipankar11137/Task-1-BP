@@ -3,7 +3,8 @@ import NavbarHome from '../../Share/NavbarHome';
 import Banner from './Home/Banner/Banner';
 
 import '../../Css/Navbar.css';
-import WelcomePost from './WelcomePost/WelcomePost';
+import FeaturedBusinessSales from './Home/Featured Business Sales/FeaturedBusinessSales';
+import WelcomePost from './Home/WelcomePost/WelcomePost';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <NavbarHome />
       <Banner />
       <WelcomePost />
+      <FeaturedBusinessSales />
     </div>
   );
 };
