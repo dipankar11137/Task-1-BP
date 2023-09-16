@@ -4,6 +4,7 @@ import Banner from './Home/Banner/Banner';
 
 import '../../Css/Navbar.css';
 import FeaturedBusinessSales from './Home/Featured Business Sales/FeaturedBusinessSales';
+import FeaturedFranchiseSales from './Home/Featured Franchise Sales/FeaturedFranchiseSales';
 import WelcomePost from './Home/WelcomePost/WelcomePost';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner />
       <WelcomePost />
       <FeaturedBusinessSales />
+      <FeaturedFranchiseSales />
     </div>
   );
 };
