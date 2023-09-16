@@ -17,7 +17,7 @@ const Banner = () => {
             Find Business Opportunities for Sale
           </h1>
           <div className="bg-white bg-opacity-10 py-3 px-5 rounded-full">
-            <div className="grid md:grid-cols-4 p-7 gap-2">
+            <div className="md:grid  md:grid-cols-4 p-7 gap-2 hidden ">
               <div className="dropdown dropdown-bottom">
                 <label
                   tabIndex={0}
