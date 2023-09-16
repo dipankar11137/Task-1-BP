@@ -23,12 +23,10 @@ Aos.init();
 function App() {
   return (
     <div>
-      {/* <CreateAccount /> */}
-
       <Routes>
         <Route path="/" element={<Home />}></Route>
 
-        {/* dashboard */}
+        {/* Pro Admin */}
         <Route path="/proAdmin" element={<Header />}>
           <Route index element={<ProAdminHome />} />
           <Route path="myProfile" element={<MyProfile />} />

@@ -12,6 +12,7 @@ module.exports = {
           secondary: '#006770',
           accent: '#0d6efd',
           neutral: '#073855',
+          buttonColor: '#774E88',
           'base-100': '#ffffff',
 
           '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
